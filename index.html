@@ -3,12 +3,24 @@
     <head>
         <meta charset="UTF-8">
         <title>Clicker Game</title>
-        <script src="script.js"></script>
+        <script type="module" src="js/main.js"></script>
+        <script type="module" src="js/eventListeners.js"></script>
+        <script type="module" src="js/uiUpdates.js"></script>
+        <script type="module" src="js/gameLogic.js"></script>
+        <script type="module" src="js/clickHandler.js"></script>
     </head>
 
     <body>
         <a id="button" onclick="handleClick()">Click me!</a>
         <p id="counter">0 clicks</p>
-        <p id="toomuch"></p>
+        <p id="rocks">0 rocks</p>
+        <a id="rockItem" onclick="upgradeToRockItem()"></a>
+        
+        <!-- All the buttons are handled in clickHandler.js -->
     </body>
 </html>
+
+
+<!-- TO-DO
+- Make a way to counter and rocks begin as zero, but inside js, not pure text here in html 
+-->
