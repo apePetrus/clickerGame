@@ -1,8 +1,9 @@
-import { incrementCounter, checkThreshold, rockItemUpgradeEffects } from "./gameLogic.js";
+
+import { incrementCounter, checkThreshold, rockItemUpgradeEffects, slaveWorker } from "./gameLogic.js";
 import { updateClicks, updateRocks, rockItemEnablerButton, rockItemButtonCloser } from "./uiUpdates.js";
 
 // Comes from clickHandler.js from handleClick()
-document.addEventListener('counterUpdated', () => {
+document.addEventListener('counterUpdate', () => {
     incrementCounter();
     updateClicks();
     updateRocks();
@@ -10,7 +11,7 @@ document.addEventListener('counterUpdated', () => {
 });
 
 // Comes from clickHandler.js from upgradeToRockItem()
-document.addEventListener('rockItemUpgradeEvent', () => {
+document.addEventListener('upgradeToRockItemEvent', () => {
     rockItemUpgradeEffects();
 });
 
@@ -23,3 +24,8 @@ document.addEventListener('rockItemEnabler', () => {
 document.addEventListener('rockItemButtonCloseEvent', () => {
     rockItemButtonCloser();
 })
+
+
+document.addEventListener('buySlaveEvent'), () => {
+    slaveWorker();
+}
