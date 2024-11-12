@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Clicker Game</title>
-        <script type="module" src="js/main.js"></script>
-        <script type="module" src="js/eventListeners.js"></script>
-        <script type="module" src="js/uiUpdates.js"></script>
-        <script type="module" src="js/gameLogic.js"></script>
-        <script type="module" src="js/clickHandler.js"></script>
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Clicker Game</title>
 
-    <body>
-        <a id="button" onclick="handleClick()">Click me!</a>
-        <p id="counter">0 clicks</p>
-        <p id="rocks">0 rocks</p>
-        <button id="rockItem" onclick="upgradeToRockItem()"></button>
-        <button id="slaveBuy" onclick="buySlave()">Buy a slave</button>
-        
-        <!-- All the buttons are handled in clickHandler.js -->
-    </body>
+  <link rel='stylesheet' href='styles/style.css'>
+
+</head>
+<body>
+  <div class='game-container'>
+ 
+    <div class='resource-counter'>
+      <h2>Resources</h2>
+      <p><span id='clickDisplay'>0</span> clicks</p>
+    </div>
+    
+    <div class='action-button'>
+      <button id='clickButton'>Click me</button> 
+    </div>
+  
+    <div class='inventory'>
+      <h2>Inventory</h2>
+      <p>Clicks: <span id="inventory-clicks">0</span></p>
+    </div>
+   
+    <div class='log'>
+      <h2>Recent Events</h2>
+      <div id='log-output'>
+        <p>Start clicking to increase clicks!</p> 
+      </div>
+    </div>
+  
+
+  </div>
+  <script src="js/main.js"></script> 
+</body>
 </html>
 
-
-<!-- TO-DO
-- Make a way to counter and rocks begin as zero, but inside js, not pure text here in html 
+<!-- 
+  game-container
+  resource-counter
+  action-button
+  inventory
+  log
 -->
+
+
